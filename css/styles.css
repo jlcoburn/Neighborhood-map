@@ -1,0 +1,41 @@
+ html, body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  margin-top: 5px;
+}
+
+select {
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+
+#list {
+  list-style: none;
+  text-align: left;
+}
+
+#map {
+  margin: 0;
+  padding: 0;
+  height: 600px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Neighborhood Map</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/knockout-3.4.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+     <h1 class="center">Neighborhood Map</h1>
+
+    <div class="row">
+      <div id="placesList" class="col-md-2">
+        <!--<label for="">Search:</label>
+        <input id="searchBox" data-bind="textInput: search_Req" />-->
+        <span>Filter:
+          <select data-bind="options: categories, optionsCaption: 'Select:..'"></select>
+        </span>
+
+
+        <ul id="list" data-bind="foreach: locations">
+            <li data-bind="text: title"></li>
+        </ul>
+      </div> <!--placesList-->
+
+      <div id="mapArea" class="col-md-10">
+        <div id="map"></div>
+      </div> <!--mapArea div-->
+    </div> <!-- row-->
+    </div> <!--Container div -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyBy8KfHQZpZPD0knt4odz3iV56d9l68qPY&v=3&callback=initMap">
+    </script>
+    <script src= "js/app.js"></script>
+
+  </body>
+</html>
