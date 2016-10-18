@@ -28,6 +28,9 @@ select {
   height: 100%;
 }
 
+#infoWindow {
+  color: black;
+}
 
 #list {
   list-style: none;
