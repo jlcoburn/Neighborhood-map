@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Neighborhood Map</title>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/knockout-3.4.0.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -25,7 +23,7 @@
 
 
         <ul id="list" data-bind="foreach: locations">
-            <li data-bind="text: title"></li>
+            <li data-bind="text: title, click: $parent.clickLocations"></li>
         </ul>
       </div> <!--placesList-->
 
@@ -36,6 +34,10 @@
     </div> <!--Container div -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyBy8KfHQZpZPD0knt4odz3iV56d9l68qPY&v=3&callback=initMap">
     </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/knockout-3.4.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/map.js"></script>
     <script src= "js/app.js"></script>
 
   </body>

@@ -20,6 +20,10 @@ select {
   color: black;
 }
 
+.row {
+  height: 100%;
+}
+
 .center {
   text-align: center;
 }
@@ -37,8 +41,12 @@ select {
   text-align: left;
 }
 
-#map {
+#mapArea {
   margin: 0;
   padding: 0;
-  height: 600px;
+  height: 100%;
+}
+
+#map {
+  height: 90%;
 }
