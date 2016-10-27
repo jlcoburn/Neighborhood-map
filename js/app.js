@@ -37,6 +37,9 @@ var ViewModel = function() {
     console.log(location.title);
   };
 
+  if (this.selectedCategory === 'Food') {
+    console.log('nom');
+  }
 
 };
 

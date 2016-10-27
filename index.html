@@ -11,14 +11,16 @@
 
   <body>
     <div class="container-fluid">
+    <button type="button" class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
      <h1 class="center">Neighborhood Map</h1>
 
     <div class="row">
       <div id="placesList" class="col-md-2">
         <!--<label for="">Search:</label>
         <input id="searchBox" data-bind="textInput: search_Req" />-->
-        <span>Filter:
-          <select data-bind="options: categories, optionsCaption: 'Select:..', value: selectedCategory"></select>
+        <span>Categories:
+          <select data-bind="options: categories, optionsCaption: 'All', value: selectedCategory"></select>
         </span>
 
 

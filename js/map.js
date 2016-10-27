@@ -1,7 +1,7 @@
 var map;
 var markers = [];
 var fncIndex = 0;
-
+var address;
 
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -19,14 +19,14 @@ var fncIndex = 0;
     //Setup string to make phone number easier to read
     var phoneNum = '(' + locations[i].phoneNum.slice(2,5) + ') ' + locations[i].phoneNum.slice(5,8) + '-' + locations[i].phoneNum.slice(8);
     //call function to get address from lat lng coordinates
-    var address = getAddress(this.locations[i].location);
-    console.log(address);
+    // address = getAddress(this.locations[i].location);
+    console.log('map' + address);
     var marker = new google.maps.Marker({
       map: map,
       position: position,
       title: title,
       phoneNum: phoneNum,
-      address: address,
+      address: getAddress(this.locations[i].location),
       animation: google.maps.Animation.DROP,
       id: i
     });
@@ -36,6 +36,13 @@ var fncIndex = 0;
 
   marker.addListener('click', function() {
     populateInfoWindow(this, largeInfoWindow);
+  });
+
+  marker.addListener('mouseover', function() {
+    toggleMarkerAnimation(this);
+  });
+
+  marker.addListener('mouseout', function() {
     toggleMarkerAnimation(this);
   });
 
@@ -71,7 +78,7 @@ var fncIndex = 0;
 
   function getAddress(latlng) {
     var geocoder = new google.maps.Geocoder();
-    var address;
+    var localAddress = '';
     fncIndex += 1;
     geocoder.geocode(
       { location: latlng
@@ -80,12 +87,13 @@ var fncIndex = 0;
 
       }, function(results, status) {
         if (status === 'OK') {
-          console.log('Try: ' + fncIndex + ' = ' + results[0].formatted_address);
-          address = results[0].formatted_address;
+          //console.log('Try: ' + fncIndex + ' = ' + results[0].formatted_address);
+          localAddress = results[0].formatted_address;
+          console.log(localAddress);
+          return localAddress;
         } /* else {
           console.log('Failed on try: ' + fncIndex);
           window.alert('Failed to get addresses due to: ' + status);
         } */
       });
-     return address;
   }
