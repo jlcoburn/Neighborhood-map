@@ -1,10 +1,11 @@
- html, body {
-  font-family: Arial, sans-serif;
+
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   background-color: black;
   color: white;
+  overflow-x: hidden;
 }
 
 ul {
@@ -16,20 +17,20 @@ li {
   margin-top: 5px;
 }
 
-select {
-  color: black;
-}
-
-.row {
-  height: 100%;
-}
-
-.center {
+#title {
   text-align: center;
+  margin: 5px;
+
 }
 
-.container-fluid {
-  height: 100%;
+#menuButton {
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+#map {
+  height: 80%;
+  width: 100%;
 }
 
 #infoWindow {
@@ -39,14 +40,24 @@ select {
 #list {
   list-style: none;
   text-align: left;
+  width: 100%;
 }
 
-#mapArea {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+#placesList {
+  width: 100%;
+  cursor: pointer;
+  cursor: hand;
+  padding: 0,0, 0, 0;
 }
 
-#map {
-  height: 90%;
+.sideBar {
+  height: 80%;
+  display: none;
+  width: 15%;
+  margin-top: 0;
+  margin-left: 0;
+  background-color: black;
+  position: fixed;
+  z-index: 1;
+  text-align: left;
 }
