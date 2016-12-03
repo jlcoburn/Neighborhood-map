@@ -52,7 +52,7 @@ li {
 
 .sideBar {
   height: 80%;
-  display: none;
+  display: block;
   width: 15%;
   margin-top: 0;
   margin-left: 0;

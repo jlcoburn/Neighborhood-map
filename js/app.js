@@ -85,22 +85,24 @@ var arrayLength = locations.length;
     });
 
   markers.push(marker);
+  locations[i].marker = marker;
   bounds.extend(markers[i].position);
 
  marker.addListener('click', function() {
-    console.log('listener ' + this);
+    //console.log('listener ' + this);
+    toggleMarkerAnimation(this);
     populateInfoWindow(this, largeInfoWindow);
   });
 
   //Bounce marker when mouse is over, stop bounce when mouse moves out
-  marker.addListener('mouseover', function() {
+/*  marker.addListener('mouseover', function() {
     toggleMarkerAnimation(this);
   });
 
   marker.addListener('mouseout', function() {
     toggleMarkerAnimation(this);
 
-  });
+  }); */
 
   } //if
     map.fitBounds(bounds);
@@ -129,6 +131,10 @@ var arrayLength = locations.length;
     }
   }
 
+  function closeInfoWindow(marker, infoWindow) {
+    infoWindow.close();
+    infoWindow.setContent(null);
+  }
 
 //Yelp function based on code sample from MarkN @ Udacity
 
@@ -169,7 +175,7 @@ var arrayLength = locations.length;
         console.log(businesses[0].rating);
       },
       fail: function() {
-        console.log('shit is broken, yo');
+        console.log('something went wrong');
       }
     };
 
@@ -178,7 +184,7 @@ var arrayLength = locations.length;
 
   }
 
-var viewModel = function() {
+var viewModel = function(marker) {
 
   locations.sort(function (first, second) { return first.title > second.title ? 1 : -1; });
 
@@ -190,10 +196,7 @@ var viewModel = function() {
   self.selectedCategory = ko.observable();
   self.locationsArray = ko.observableArray(locations);
 
-  for (var i=0; i < arrayLength; i++) {
-  console.log('test: ' + self.locationsArray()[i].title);
-}
-  self.filterLocations = ko.computed(function() {
+/*  self.filterLocations = ko.computed(function() {
     if (self.selectedCategory()==='All') {
         //self.locationsArray().length = 0;
         //console.log('hiphip' + self.locationsArray().length);
@@ -224,12 +227,16 @@ var viewModel = function() {
           }
         }
     }
+  }); */
+
+  self.filterLocations = ko.computed(function() {
+
+
   });
 
-
+  // Open info window if location is clicked in list
   this.clickLocations = function(location) {
-    console.log(location);
-    google.maps.event.trigger(marker,'click');
+    google.maps.event.trigger(location.marker, 'click');
   };
 
 };

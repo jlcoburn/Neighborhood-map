@@ -1,0 +1,963 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"toBe",
+				"toBeDefined"
+			],
+			[
+				"url",
+				"url"
+			],
+			[
+				"all",
+				"allFeeds"
+			],
+			[
+				"new",
+				"newContent"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"feed",
+				"feedEntry"
+			],
+			[
+				"menu",
+				"menu-icon-link"
+			],
+			[
+				"me",
+				"menu-hidden"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"to",
+				"toBeDefined"
+			],
+			[
+				"get",
+				"getInitialContacts"
+			],
+			[
+				"A",
+				"AddressBook"
+			],
+			[
+				"add",
+				"addressBook"
+			],
+			[
+				"Address",
+				"AddressBook"
+			],
+			[
+				"Addres",
+				"addressBook"
+			],
+			[
+				"a",
+				"arrayLength"
+			],
+			[
+				"array",
+				"arrayLength"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"over",
+				"overflow-x"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"l",
+				"locationsArray"
+			],
+			[
+				"locations",
+				"locationsArray"
+			],
+			[
+				"loca",
+				"locationsArray"
+			],
+			[
+				"lo",
+				"locationsArray"
+			],
+			[
+				"loc",
+				"locationsArray"
+			],
+			[
+				"loac",
+				"locationsArray"
+			],
+			[
+				"infoW",
+				"infoWindow"
+			],
+			[
+				"po",
+				"populateInfoWindow"
+			],
+			[
+				"y",
+				"yelpConent"
+			],
+			[
+				"YEL",
+				"YELP_KEY_SECRET"
+			],
+			[
+				"YELP",
+				"YELP_TOKEN_SECRET"
+			],
+			[
+				"se",
+				"selCategory"
+			],
+			[
+				"for",
+				"formatted_address"
+			],
+			[
+				"locat",
+				"location"
+			],
+			[
+				"c",
+				"category"
+			],
+			[
+				"info",
+				"infoWindow"
+			],
+			[
+				"sle",
+				"selectedCategory"
+			],
+			[
+				"selecte",
+				"selectedCategory"
+			],
+			[
+				"ob",
+				"observable"
+			],
+			[
+				"o",
+				"observableArray"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"flex",
+				"flex-wrap"
+			],
+			[
+				"n",
+				"nicknames"
+			],
+			[
+				"im",
+				"imgAttribution"
+			],
+			[
+				"img",
+				"imgAttribution"
+			],
+			[
+				"cats",
+				"cats"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"w",
+				"wikiTitles"
+			],
+			[
+				"wiki",
+				"wikiLinks"
+			],
+			[
+				"wi",
+				"wikiURL"
+			],
+			[
+				"ny",
+				"nytHeaderElem"
+			],
+			[
+				"nyt",
+				"nytHeaderElem"
+			],
+			[
+				"r",
+				"response"
+			],
+			[
+				"s",
+				"stateName"
+			],
+			[
+				"fu",
+				"fullLocation"
+			],
+			[
+				"city",
+				"cityName"
+			],
+			[
+				"stre",
+				"streetName"
+			],
+			[
+				"co",
+				"compress"
+			],
+			[
+				"mi",
+				"minify-css"
+			],
+			[
+				"num",
+				"numPizzas"
+			],
+			[
+				"scroll",
+				"scrollTop"
+			],
+			[
+				"pizza",
+				"pizzaPics"
+			],
+			[
+				"quer",
+				"querySelectorAll"
+			],
+			[
+				"pizz",
+				"pizzasPics"
+			],
+			[
+				"randomPiz",
+				"randomPizzaContainer"
+			],
+			[
+				"q",
+				"querySelectorAll"
+			],
+			[
+				"make",
+				"makePixelVibrant"
+			],
+			[
+				"makeP",
+				"makePixelChroma"
+			],
+			[
+				"Wo",
+				"worker"
+			],
+			[
+				"post",
+				"postMessage"
+			],
+			[
+				"imag",
+				"imageData"
+			],
+			[
+				"enem",
+				"enemyArray"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"wo",
+				"wongame"
+			],
+			[
+				"end",
+				"endGame"
+			],
+			[
+				"ga",
+				"gameOver"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"can",
+				"canvas"
+			],
+			[
+				"onc",
+				"onclick\tAttr"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"dra",
+				"drawImage"
+			],
+			[
+				"char",
+				"char-princes-girl"
+			],
+			[
+				"player",
+				"playerSprite"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"ch",
+				"checkCollisions"
+			],
+			[
+				"valid",
+				"validY"
+			],
+			[
+				"pr",
+				"prototype"
+			],
+			[
+				"prot",
+				"proto\tPrototype"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"ca",
+				"canvasHeight"
+			],
+			[
+				"image",
+				"imageHeight"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"randmo",
+				"randomNumberObject"
+			],
+			[
+				"ti",
+				"title\tTag"
+			],
+			[
+				"schoo",
+				"schoolMajor"
+			],
+			[
+				"fo",
+				"formattedMobile"
+			],
+			[
+				"e",
+				"education"
+			],
+			[
+				"edu",
+				"education"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"d",
+				"diploma"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"sc",
+				"school"
+			],
+			[
+				"online_course",
+				"online_course-entry"
+			],
+			[
+				"f",
+				"footerContacts"
+			],
+			[
+				"formatted",
+				"formattedGithub"
+			],
+			[
+				"formatt",
+				"formattedEmail"
+			],
+			[
+				"form",
+				"formattedTitle"
+			],
+			[
+				"forma",
+				"formattedProjectTitle"
+			],
+			[
+				"last",
+				"lastName"
+			],
+			[
+				"las",
+				"lastName"
+			],
+			[
+				"spl",
+				"splitName"
+			],
+			[
+				"time",
+				"timeStamp"
+			],
+			[
+				"log",
+				"logClicks"
+			],
+			[
+				"display",
+				"displaySkills"
+			],
+			[
+				"displ",
+				"displayWork"
+			],
+			[
+				"formatte",
+				"formattedWelcome"
+			],
+			[
+				"HTML",
+				"HTMLworkStart"
+			],
+			[
+				"C",
+				"Carolina"
+			],
+			[
+				"p",
+				"currentPosition"
+			],
+			[
+				"del",
+				"delayBeforeBullet"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"fig",
+				"figcaption\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1196,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/app.js",
+			"settings":
+			{
+				"buffer_size": 7234,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"pc",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 181.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Jason/Projects/frontend-nanodegree-feedreader/index.html",
+		"/C/Users/Jason/Projects/frontend-nanodegree-feedreader/js/app.js",
+		"/C/Users/Jason/Projects/frontend-nanodegree-feedreader/jasmine/spec/feedreader.js",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/C/Users/Jason/Projects/frontend-nanodegree-feedreader/.git/COMMIT_EDITMSG",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/C/Users/Jason/Projects/frontend-nanodegree-feedreader/README.md",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/User/Side Bar Folders.sublime-settings",
+		"/C/Users/Jason/Projects/ud549/spec/AddressBookSpec.js",
+		"/C/Users/Jason/Projects/frontend-nanodegree-feedreader/css/style.css",
+		"/C/Users/Jason/Projects/frontend-nanodegree-feedreader/css/normalize.css",
+		"/C/Users/Jason/Projects/ud549/src/Contact.js",
+		"/C/Users/Jason/Projects/ud549/src/AddressBook.js",
+		"/C/Users/Jason/Projects/ud549/SpecRunner.html",
+		"/C/Users/Jason/Projects/ud549/spec/PlayerSpec.js",
+		"/C/FEND_Neighborhood_Project-master/index.html",
+		"/C/FEND_Neighborhood_Project-master/style.css",
+		"/C/FEND_Neighborhood_Project-master/js/app.js",
+		"/C/Users/Jason/Projects/Neighborhood-map/index.html",
+		"/C/Users/Jason/Projects/Neighborhood-map/js/app.js",
+		"/C/Users/Jason/Projects/Neighborhood-map/index2.html",
+		"/C/Users/Jason/Projects/neighborhood-map/.git/COMMIT_EDITMSG",
+		"/C/Users/Jason/Projects/Neighborhood-map/css/styles2.css",
+		"/C/Users/Jason/Projects/Neighborhood-map/css/styles.css",
+		"/C/Users/Jason/Projects/Neighborhood-map/js/map.js",
+		"/C/Users/Jason/Projects/Neighborhood-map/js/oauth-signature.js",
+		"/C/Users/Jason/Projects/Neighborhood-map/js/yelpdata.js",
+		"/C/Users/Jason/Projects/Neighborhood-map/js/yelpdata.js.js",
+		"/C/Users/Jason/Projects/Neighborhood-map/js/oauth.js",
+		"/C/Users/Jason/Projects/minicourse-ajax-project/js/script.js",
+		"/C/Users/Jason/Projects/Map-tutorial/Project_Code_5_BeingStylish.html",
+		"/C/Users/Jason/Projects/Front End Web Developer/resume/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/C/Users/Jason/Projects/Neighborhood-map/.git/COMMIT_EDITMSG",
+		"/C/Users/Jason/Projects/Map-tutorial/Project_Code_8_GeocodingInTheApp.html",
+		"/C/Users/Jason/Projects/Map-tutorial/Project_Code_3_WindowShoppingPart1.html",
+		"/C/Users/Jason/Projects/Map-tutorial/Project_Code_7_Drawing.html",
+		"/C/Users/Jason/Projects/Map-tutorial/07_Markers_Infowindows Quiz.html",
+		"/C/Users/Jason/Projects/Front End Web Developer/Intro to HTML/portfolio/index.html",
+		"/C/Users/Jason/Projects/Front End Web Developer/Intro to HTML/toplist/index.html",
+		"/C/Users/Jason/Projects/minicourse-ajax-project/css/style.css",
+		"/C/Users/Jason/Projects/ToDo/js/views/app-view.js",
+		"/C/Users/Jason/Projects/ToDo/js/app.js",
+		"/C/Users/Jason/Projects/ToDo/index.html",
+		"/C/Users/Jason/Projects/cat-clicker-ko/js/app.js",
+		"/C/Users/Jason/Projects/cat-clicker-ko/index.html",
+		"/C/Users/Jason/Projects/cat-clicker-premium/css/styles.css",
+		"/C/Users/Jason/Projects/cat-clicker-premium/js/script.js",
+		"/C/Users/Jason/Projects/cat-clicker-premium/index.html",
+		"/C/Users/Jason/Projects/Cat-Clicker/index.html",
+		"/C/Users/Jason/Projects/minicourse-ajax-project/index.html",
+		"/C/Users/Jason/Projects/OptiPortfolio/index.html",
+		"/C/Media/algo-p1/programming-assignments/README.txt",
+		"/C/Users/Jason/Projects/ud-retain/ud989-retain/js/retain.js",
+		"/C/Users/Jason/Projects/ud-retain/ud989-retain/index.html",
+		"/C/eclipse/configuration/config.ini",
+		"/C/eclipse/configuration/.settings/org.eclipse.ui.ide.prefs",
+		"/C/eclipse/eclipse.ini",
+		"/C/Users/Jason/Projects/Front End Web Developer/Intro to HTML/portfolio/jlcoburn.github.io/index.html",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/python-markdown/README.md",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/mdpopups/README.md",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/Users/Jason/Downloads/script.js",
+		"/C/Users/Jason/Projects/minicourse-ajax-project/nyt-api-response.json",
+		"/C/Media/TV Shows/Mr Robot Season 2/Mr Robot S02E08 2016 HDTV x264 - KILLERS/ReadMe.txt",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Jason/Projects/fend-animal-trading-cards-master/card.html",
+		"/C/Users/Jason/Projects/bks/index.html",
+		"/C/Test Site/js/app.js",
+		"/C/Users/Jason/Projects/OptiPortfolio/dist/css/style.css",
+		"/C/Users/Jason/Projects/OptiPortfolio/dist/index.html",
+		"/C/Users/Jason/Projects/index.html",
+		"/C/Users/Jason/Projects/OptiPortfolio/css/style.css",
+		"/C/Users/Jason/Projects/OptiPortfolio/css/print.css",
+		"/C/Users/Jason/Projects/OptiPortfolio/dist/css/print.css",
+		"/C/Users/Jason/Projects/optiportfolio/.git/COMMIT_EDITMSG",
+		"/C/Users/Jason/Projects/OptiPortfolio/gulpfile.js",
+		"/C/Users/Jason/Projects/OptiPortfolio/README.md",
+		"/C/Users/Jason/Projects/OptiPortfolio/dist/css/bootstrap-grid.css",
+		"/C/Users/Jason/Projects/Front End Web Developer/resume/frontend-nanodegree-resume/js/helper.js",
+		"/C/Users/Jason/Projects/Front End Web Developer/resume/frontend-nanodegree-resume/index.html",
+		"/C/Users/Jason/Projects/OptiPortfolio/views/js/main.js",
+		"/C/Test Site/index.html",
+		"/C/Users/Jason/Projects/googleanalytics-scrpt.html",
+		"/C/Test Site/test.html",
+		"/C/Users/Jason/Projects/OptiPortfolio/package.json",
+		"/C/Users/Jason/Projects/OptiPortfolio/node_modules/gulp/index.js",
+		"/C/Users/Jason/Projects/Intro to CS/addition.py",
+		"/C/Users/Jason/Projects/OptiPortfolio/.gitignore",
+		"/C/Users/Jason/Projects/OptiPortfolio/views/css/style.css",
+		"/C/Users/Jason/Projects/OptiPortfolio/views/pizza.html",
+		"/C/Users/Jason/Downloads/box-recalc-style-slow.html",
+		"/C/Users/Jason/Projects/QR-reader/app/scripts/main.js",
+		"/C/Users/Jason/Projects/QR-reader/app/index.html",
+		"/C/Users/Jason/Projects/QR-reader/gulpfile.js",
+		"/C/Users/Jason/Projects/QR-reader/package.json",
+		"/C/Users/Jason/Projects/web-workers-demo-master/index.html",
+		"/C/Users/Jason/Projects/web-workers-demo-master/scripts/image-app.js",
+		"/C/Users/Jason/Projects/web-workers-demo-master/scripts/worker.js",
+		"/C/Test Site/scripts/imageManips.js",
+		"/C/Test Site/scripts/image-app.js",
+		"/C/Users/Jason/Projects/web-workers-demo-master/scripts/imageManips.js",
+		"/C/Users/Jason/Projects/OptiPortfolio/js/perfmatters.js",
+		"/C/Users/Jason/Projects/OptiPortfolio/views/css/bootstrap-grid.css",
+		"/C/Users/Jason/Projects/OptiPortfolio/project-2048.html",
+		"/C/Users/Jason/Projects/OptiPortfolio/dist/style.css",
+		"/C/Users/Jason/Downloads/game_new.js",
+		"/C/Users/Jason/Documents/adb.bat",
+		"/C/Users/Jason/Projects/FroggerGame/index.html",
+		"/C/Users/Jason/Projects/FroggerGame/css/style.css",
+		"/C/inetpub/wwwroot/iisstart.htm",
+		"/C/Users/Jason/Projects/FroggerGame/js/engine.js",
+		"/C/Users/Jason/Projects/FroggerGame/js/app.js",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Jason/Projects/froggergame/.git/COMMIT_EDITMSG",
+		"/C/Users/Jason/AppData/Roaming/Sublime Text 3/Packages/Simple Print Function/README.md",
+		"/C/Users/Jason/.gitconfig",
+		"/C/Users/Jason/.bash_profile",
+		"/C/Users/Jason/Projects/FroggerGame/.git/COMMIT_EDITMSG",
+		"/C/Users/Jason/Projects/FroggerGame/.git/config",
+		"/C/Users/Jason/Projects/FroggerGame/js/temp.js",
+		"/C/Users/Jason/Projects/FroggerGame/js/resources.js",
+		"/C/Users/Jason/Projects/FroggerGame/js/test.html",
+		"/C/Users/Jason/Projects/Canvas/MemeGenerator.html",
+		"/C/Users/Jason/Projects/Canvas/canvas-tutorial.html",
+		"/C/Users/Jason/Projects/Canvas/imagedata.html",
+		"/C/Users/Jason/Projects/Canvas/test.md",
+		"/C/Users/Jason/Projects/fend-animal-trading-cards-master/styles.css"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"initialContent",
+			"TODO",
+			"locations",
+			"food",
+			"setMarker",
+			"console.log",
+			"latlong",
+			".mover",
+			"mediastrea",
+			"\"",
+			");\n",
+			"imageHeight",
+			"imageWidth",
+			"\"",
+			"project",
+			"projects",
+			"and",
+			"coin",
+			"coins",
+			"delayBeforeBullet",
+			"width",
+			">\n",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"placeList",
+			"Food",
+			"location",
+			"'",
+			"canvas.height",
+			"canvas.width",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								296,
+								296
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 45.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.4546875,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 148.0
+	},
+	"pinned_build_system": "",
+	"project": "map-project.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Jason\\Projects\\FroggerGame\\js\\engine.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
