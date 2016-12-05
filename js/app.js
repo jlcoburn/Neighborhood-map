@@ -131,10 +131,7 @@ var arrayLength = locations.length;
     }
   }
 
-  function closeInfoWindow(marker, infoWindow) {
-    infoWindow.close();
-    infoWindow.setContent(null);
-  }
+
 
 //Yelp function based on code sample from MarkN @ Udacity
 
@@ -184,7 +181,7 @@ var arrayLength = locations.length;
 
   }
 
-var viewModel = function(marker) {
+var viewModel = function(markers) {
 
   locations.sort(function (first, second) { return first.title > second.title ? 1 : -1; });
 
@@ -230,6 +227,13 @@ var viewModel = function(marker) {
   }); */
 
   self.filterLocations = ko.computed(function() {
+    for (var i = 0; i < arrayLength; i++) {
+      if (self.locationsArray()[i].category !== self.selectedCategory()) {
+//          console.log(markers[i]);
+//        locations[i].marker.setVisible();
+      }
+    }
+
 
 
   });
