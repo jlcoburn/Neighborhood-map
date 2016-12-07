@@ -89,20 +89,10 @@ var arrayLength = locations.length;
   bounds.extend(markers[i].position);
 
  marker.addListener('click', function() {
-    //console.log('listener ' + this);
     toggleMarkerAnimation(this);
     populateInfoWindow(this, largeInfoWindow);
   });
 
-  //Bounce marker when mouse is over, stop bounce when mouse moves out
-/*  marker.addListener('mouseover', function() {
-    toggleMarkerAnimation(this);
-  });
-
-  marker.addListener('mouseout', function() {
-    toggleMarkerAnimation(this);
-
-  }); */
 
   } //if
     map.fitBounds(bounds);
@@ -181,69 +171,51 @@ var arrayLength = locations.length;
 
   }
 
-var viewModel = function(markers) {
+var viewModel = function() {
 
   locations.sort(function (first, second) { return first.title > second.title ? 1 : -1; });
 
   var self = this;
 
-
-  //initialize a knockout observable array to hold locations
   self.categories = ko.observableArray(['All','Food','Gun shop']);
-  self.selectedCategory = ko.observable();
+  self.selectedCategory = ko.observable('All');
   self.locationsArray = ko.observableArray(locations);
 
-/*  self.filterLocations = ko.computed(function() {
-    if (self.selectedCategory()==='All') {
-        //self.locationsArray().length = 0;
-        //console.log('hiphip' + self.locationsArray().length);
-        for (var i=0; i < arrayLength; i++) {
-          //console.log('hooray');
-          self.locationsArray(locations[i]);
-          console.log('in the loop' + self.locationsArray());
-        }
 
-    } else if (self.selectedCategory()==='Gun shop') {
-        self.locationsArray().length = 0;
-        for (var i=0; i < arrayLength; i++) {
-          if (self.locations[i].category === 'Gun shop') {
-            console.log('yes');
-            self.locationsArray(locations[i]);
-            console.log(self.locationsArray());
-          }
-        }
 
-    } else if (self.selectedCategory()==='Food') {
-      self.locationsArray().length = 0;
-      for (i=0; i < 7; i++) {
-        if (this.locations[i].category === self.selectedCategory()) {
-          //i.markers.setVisible();
-          self.locationsArray().push(this.locations[i]);
-          console.log('step['+i+']'+ this.locations[i].title);
-          console.log(self.locationsArray());
-          }
-        }
-    }
-  }); */
-
-  self.filterLocations = ko.computed(function() {
+  //filter list based on option selected in dropdown box
+  self.filterLocations = ko.computed(function(locations) {
+    var tempArray = [];
+    if (self.selectedCategory() === 'All') {
     for (var i = 0; i < arrayLength; i++) {
-      if (self.locationsArray()[i].category !== self.selectedCategory()) {
-//          console.log(markers[i]);
-//        locations[i].marker.setVisible();
+          tempArray.push(this.locations[i]);
+          //Have to do this because this code loads before the map markers are placed
+          //without this check we get a undefined error
+          if (this.locations[i].marker) {
+            this.locations[i].marker.setVisible(true);
+          }
       }
-    }
+    } else {
+        for (var j = 0; j < arrayLength; j++) {
+          if (self.selectedCategory() === this.locations[j].category) {
+            tempArray.push(this.locations[j]);
+            this.locations[j].marker.setVisible(true);
+          } else {
+            //console.log(this.locations[j].marker);
+            this.locations[j].marker.setVisible(false);
+          }
+        }
+        }
+    self.locationsArray(tempArray);
 
+    });
 
-
-  });
 
   // Open info window if location is clicked in list
   this.clickLocations = function(location) {
     google.maps.event.trigger(location.marker, 'click');
+    };
   };
-
-};
 
   ko.applyBindings(new viewModel());
 
@@ -253,6 +225,3 @@ var viewModel = function(markers) {
   function toggleSideBar() {
     $(".sideBar").toggle("fast");
   }
-
-
-
