@@ -5,56 +5,56 @@ var locations = [
    title: 'Split Second Response',
    address: '7 W Main St, Thomasville, NC 27360',
    location: {lat: 35.882414, lng: -80.081858},
-   phoneNum: '+13366882466'
+   phoneNum: '3366882466'
   },
   {
    category: 'Gun shop',
    title: 'The Gun Shop',
    address: '1481-D National Hwy, Thomasville, NC 27360',
    location: {lat: 35.924781, lng: -80.055255},
-   phoneNum: '+13368893222'
+   phoneNum: '3368893222'
   },
   {
    category: 'Gun shop',
    title: 'Elite Arms',
    address: '1908 Liberty Dr, Thomasville, NC 27360',
    location: {lat: 35.854606, lng: -80.073548},
-   phoneNum: '+13368474406'},
+   phoneNum: '3368474406'},
   {
    category: 'Gun shop',
    title: 'Carolina Guns and Gear',
    address: '1223 E Dixie Dr #B, Asheboro, NC 27203',
    location: {lat: 35.696278, lng: -79.791669},
-   phoneNum: '+13366267296'
+   phoneNum: '3366267296'
   },
   {
    category: 'Food',
    title: 'East Coast Wings',
    address: '920 Randolph St, Thomasville, NC 27360',
    location: {lat: 35.868354, lng: -80.073685},
-   phoneNum: '+13364742329'
+   phoneNum: '3364742329'
   },
   {
    category: 'Food',
    title: 'Chopstix',
    address: '4424 Wallburg Landing Dr. Winston-Salem, NC 27107',
    location: {lat: 36.027158, lng: -80.163303},
-   phoneNum: '+13363069513'
+   phoneNum: '3363069513'
   },
   {
    category: 'Food',
    title: 'Zaxbys',
    address: '1148 Randolph St, Thomasville, NC 27360',
    location: {lat: 35.855808, lng: -80.073251},
-   phoneNum: '+13363138636'
+   phoneNum: '3363138636'
   }
   ];
 
 
-var map;
-var marker;
-var markers = [];
-var arrayLength = locations.length;
+var map,
+    marker,
+    markers = [],
+    arrayLength = locations.length;
 
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -63,8 +63,8 @@ var arrayLength = locations.length;
     zoom: 13
     });
 
-  var bounds = new google.maps.LatLngBounds();
-  var largeInfoWindow = new google.maps.InfoWindow();
+  var bounds = new google.maps.LatLngBounds(),
+      largeInfoWindow = new google.maps.InfoWindow();
 
 
   for (var i = 0; i < arrayLength; i++) {
@@ -72,14 +72,13 @@ var arrayLength = locations.length;
     var title = locations[i].title;
     var address = locations[i].address;
     //Setup string to make phone number easier to read
-    var phoneNum = '(' + locations[i].phoneNum.slice(2,5) + ') ' + locations[i].phoneNum.slice(5,8) + '-' + locations[i].phoneNum.slice(8);
+    var phoneNum = '(' + locations[i].phoneNum.slice(0,3) + ') ' + locations[i].phoneNum.slice(3,6) + '-' + locations[i].phoneNum.slice(6);
     var marker = new google.maps.Marker({
       map: map,
       position: position,
       title: title,
       phoneNum: phoneNum,
       address: address,
-      yelpConent: 'yelp api is hard',//getYelpData(locations[i].phoneNum),
       animation: google.maps.Animation.DROP,
       id: i
     });
@@ -90,6 +89,7 @@ var arrayLength = locations.length;
 
  marker.addListener('click', function() {
     toggleMarkerAnimation(this);
+    map.setCenter(this.position);
     populateInfoWindow(this, largeInfoWindow);
   });
 
@@ -97,6 +97,12 @@ var arrayLength = locations.length;
   } //if
     map.fitBounds(bounds);
 
+
+ google.maps.event.addDomListener(window, "resize", function() {
+    var center = map.getCenter();
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(center);
+});
   }
 
 
@@ -109,26 +115,16 @@ var arrayLength = locations.length;
     }
   }
 
-  // Populate infowindow with info from array and from Yelp
-  function populateInfoWindow(marker, infoWindow) {
-    if (infoWindow.marker != marker) {
-      infoWindow.marker = marker;
-      infoWindow.setContent('<div id="infoWindow"> Name: ' + marker.title + '<br/>' + 'Address: ' + marker.address + '<br/>' + 'Phone number: ' + marker.phoneNum + '<br/>' + marker.yelpConent + '</div>');
-      infoWindow.open(map, marker);
-      infoWindow.addListener('closeclick', function() {
-        infoWindow.setContent(null);
-      });
-    }
-  }
 
 
-
+//Gets data from yelp api and sets the infowindow content
 //Yelp function based on code sample from MarkN @ Udacity
 
-  function getYelpData(phone) {
-
-    var YELP_KEY_SECRET = 'DspQn3gBAv0fSGz5iCCFE0253VY';
-    var YELP_TOKEN_SECRET = 'xHNuuQq7ncyZGrsU43nJsI1NoYM';
+  function populateInfoWindow(marker, infoWindow) {
+    var YELP_KEY = 'u6NKrgh6u0TjiqusYkohKQ',
+        YELP_TOKEN = 'cevD3lpYb2h29kOIOSihvrXvkwjScqU5',
+        YELP_KEY_SECRET = 'DspQn3gBAv0fSGz5iCCFE0253VY',
+        YELP_TOKEN_SECRET = 'xHNuuQq7ncyZGrsU43nJsI1NoYM';
 
 /**
  * Generates a random number and returns it as a string for OAuthentication
@@ -138,18 +134,21 @@ var arrayLength = locations.length;
       return (Math.floor(Math.random() * 1e12).toString());
 }
 
-    var yelp_url = 'https://api.yelp.com/v2/phone_search/?phone=' + phone;
-
+    var yelp_url = 'https://api.yelp.com/v2/phone_search/',
+        yelpData,
+        infoWindowContent;
     var parameters = {
-      oauth_consumer_key: 'u6NKrgh6u0TjiqusYkohKQ',
-      oauth_token: 'cevD3lpYb2h29kOIOSihvrXvkwjScqU5',
+      oauth_consumer_key: YELP_KEY,
+      oauth_token: YELP_TOKEN,
       oauth_nonce: nonce_generate(),
       oauth_timestamp: Math.floor(Date.now()/1000),
       oauth_signature_method: 'HMAC-SHA1',
       oauth_version : '1.0',
-      callback: 'cb'              // This is crucial to include for jsonp implementation in AJAX or else the oauth-signature will be wrong.
+      callback: 'cb',   // This is crucial to include for jsonp implementation in AJAX or else the oauth-signature will be wrong.
+      phone: marker.phoneNum
     };
 
+    //oauth library provided by Marco Bettioli
     var encodedSignature = oauthSignature.generate('GET',yelp_url, parameters, YELP_KEY_SECRET, YELP_TOKEN_SECRET);
     parameters.oauth_signature = encodedSignature;
 
@@ -159,10 +158,17 @@ var arrayLength = locations.length;
       cache: true, // This is crucial to include as well to prevent jQuery from adding on a cache-buster parameter "_=23489489749837", invalidating our oauth-signature
       dataType: 'jsonp',
       success: function(results) {
-        console.log(businesses[0].rating);
+        if (results.businesses[0]) {
+        yelpData = '<a href="'+ results.businesses[0].url + '">Yelp</a>: ' + '<img src="' +results.businesses[0].rating_img_url_small + '"> ('+ results.businesses[0].review_count +') reviews';
+      } else  {
+        yelpData = 'Yelp: No data available';
+      }
+        infoWindowContent = '<div id="infoWindow"> Name: ' + marker.title + '<br/>' + 'Address: ' + marker.address + '<br/>' + 'Phone number: ' + marker.phoneNum + '<br/>' + yelpData + '</div>';
+        infoWindow.setContent(infoWindowContent);
+        infoWindow.open(map, marker);
       },
       fail: function() {
-        console.log('something went wrong');
+        alert('There was a problem retrieving Yelp data.');
       }
     };
 
@@ -184,7 +190,7 @@ var viewModel = function() {
 
 
   //filter list based on option selected in dropdown box
-  self.filterLocations = ko.computed(function(locations) {
+  self.filterLocations = ko.computed(function() {
     var tempArray = [];
     if (self.selectedCategory() === 'All') {
     for (var i = 0; i < arrayLength; i++) {
@@ -192,7 +198,7 @@ var viewModel = function() {
           //Have to do this because this code loads before the map markers are placed
           //without this check we get a undefined error
           if (this.locations[i].marker) {
-            this.locations[i].marker.setVisible(true);
+              this.locations[i].marker.setVisible(true);
           }
       }
     } else {
@@ -201,7 +207,6 @@ var viewModel = function() {
             tempArray.push(this.locations[j]);
             this.locations[j].marker.setVisible(true);
           } else {
-            //console.log(this.locations[j].marker);
             this.locations[j].marker.setVisible(false);
           }
         }
@@ -222,6 +227,11 @@ var viewModel = function() {
 
   //Use jQuery to toggle visibilty of the sidebar
   //Not sure how I feel about the animation in this. Might remove.
+
+  function googleMapError() {
+    alert('There was a problem loading the map. Please reload the page to try again.');
+  }
+
   function toggleSideBar() {
     $(".sideBar").toggle("fast");
   }

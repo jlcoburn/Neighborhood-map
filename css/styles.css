@@ -61,3 +61,10 @@ li {
   z-index: 1;
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  .sideBar {
+    display: none;
+    width: 25%;
+  }
+}
