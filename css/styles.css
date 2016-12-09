@@ -1,5 +1,6 @@
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -23,7 +24,7 @@ li {
 
 }
 
-#menuButton {
+#menu-button {
   cursor: pointer;
   padding-bottom: 5px;
 }
@@ -33,7 +34,7 @@ li {
   width: 100%;
 }
 
-#infoWindow {
+#info-window {
   color: black;
 }
 
@@ -43,14 +44,14 @@ li {
   width: 100%;
 }
 
-#placesList {
+#places-list {
   width: 100%;
   cursor: pointer;
   cursor: hand;
   padding: 0,0, 0, 0;
 }
 
-.sideBar {
+.side-bar {
   height: 80%;
   display: block;
   width: 15%;
@@ -64,7 +65,7 @@ li {
 }
 
 @media (max-width: 768px) {
-  .sideBar {
+  .side-bar {
     display: none;
     width: 25%;
   }

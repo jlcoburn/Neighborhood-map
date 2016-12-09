@@ -143,9 +143,9 @@ function initMap() {
   map.fitBounds(bounds);
 
 
-  google.maps.event.addDomListener(window, "resize", function() {
+  google.maps.event.addDomListener(window, 'resize', function() {
     var center = map.getCenter();
-    google.maps.event.trigger(map, "resize");
+    google.maps.event.trigger(map, 'resize');
     map.setCenter(center);
   });
 }
@@ -154,14 +154,12 @@ function initMap() {
 //function to animate map marker
 
 function toggleMarkerAnimation(marker) {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
     marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
+    setTimeout(function(){
+      marker.setAnimation(null);
+    },2100);
+
 }
-
-
 
 //Gets data from yelp api and sets the infowindow content
 //Yelp function based on code sample from MarkN @ Udacity
@@ -210,7 +208,6 @@ function populateInfoWindow(marker, infoWindow) {
   $.ajax(settings)
     .done(function(results) {
     var busNum = 0;
-
     //Check to make sure there is yelp data available for this business
     if (results.businesses[busNum]) {
       //check for the one case where there are two results for the same phone number
@@ -218,10 +215,19 @@ function populateInfoWindow(marker, infoWindow) {
       if (results.businesses[0].name === 'Pawn Way') {
         busNum = 1;
       }
+      var loc_url,
+        rating_img,
+        rev_count;
+      //Checks to make sure each field we use has data
+      !!results.businesses[busNum].rating_img_url_small ? rating_img = results.businesses[busNum].rating_img_url_small : rating_img = 'No image available';
 
+      !!results.businesses[busNum].review_count ? rev_count = ' (' + results.businesses[busNum].review_count + ') reviews' : rev_count = 'No reviews available';
 
-      yelpData = '<a href="' + results.businesses[busNum].url + '">Yelp</a>: ' + '<img src="' + results.businesses[busNum].rating_img_url_small + '"> (' + results.businesses[busNum].review_count + ') reviews';
+      !!results.businesses[busNum].url ? loc_url = results.businesses[busNum].url : url = 'http://www.yelp.com';
+
+       yelpData = '<a href="' + loc_url + '">Yelp</a>: ' + '<img src="' + rating_img + '">' + rev_count;
     } else {
+      //Fills in data field if nothing is returned from Yelp
       yelpData = 'Location does not have a Yelp page.';
     }
   })
@@ -230,7 +236,7 @@ function populateInfoWindow(marker, infoWindow) {
     //alert('There was a problem retrieving Yelp data. Please wait a little bit and try again.');
   })
     .always(function() {
-    infoWindowContent = '<div id="infoWindow"> Name: ' + marker.title + '<br/>' + 'Address: ' + marker.address + '<br/>' + 'Phone number: ' + marker.phoneNum + '<br/>' + yelpData + '</div>';
+    infoWindowContent = '<div id="info-window"> Name: ' + marker.title + '<br/>' + 'Address: ' + marker.address + '<br/>' + 'Phone number: ' + marker.phoneNum + '<br/>' + yelpData + '</div>';
     infoWindow.setContent(infoWindowContent);
     infoWindow.open(map, marker);
   });
@@ -275,6 +281,7 @@ var viewModel = function() {
     }
     self.locationsArray(tempArray);
 
+
   });
 
 
@@ -294,5 +301,5 @@ function googleMapError() {
 //Use jQuery to toggle visibilty of the sidebar
 //Not sure how I feel about the animation in this. Might remove.
 function toggleSideBar() {
-  $(".sideBar").toggle("fast");
+  $(".side-bar").toggle("fast");
 }
