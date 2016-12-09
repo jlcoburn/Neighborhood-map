@@ -47,6 +47,27 @@ var locations = [
    address: '1148 Randolph St, Thomasville, NC 27360',
    location: {lat: 35.855808, lng: -80.073251},
    phoneNum: '3363138636'
+  },
+  {
+    category: 'Food',
+    title: 'Casa De Sotos',
+    address: '1800 Westchester Dr, High Point, NC 27262',
+    location: {lat: 35.944306, lng: -80.034585},
+    phoneNum: '3368864081'
+  },
+  {
+    category: 'Food',
+    title: 'Freddys Frozen Custard & Steakburgers',
+    address: '4106 Brian Jordan Pl, High Point, NC 27265',
+    location: {lat: 36.032787, lng:-79.957553},
+    phoneNum: '3368831888'
+  },
+  {
+    category: 'Gun Shop',
+    title: 'SCB Guns and Ammo',
+    address: '1 Hinkle St, Thomasville, NC 27360',
+    location: {lat: 35.872790, lng: -80.076696},
+    phoneNum: '3364911850'
   }
   ];
 
@@ -156,24 +177,39 @@ var map,
       url: yelp_url,
       data: parameters,
       cache: true, // This is crucial to include as well to prevent jQuery from adding on a cache-buster parameter "_=23489489749837", invalidating our oauth-signature
-      dataType: 'jsonp',
-      success: function(results) {
-        if (results.businesses[0]) {
-        yelpData = '<a href="'+ results.businesses[0].url + '">Yelp</a>: ' + '<img src="' +results.businesses[0].rating_img_url_small + '"> ('+ results.businesses[0].review_count +') reviews';
-      } else  {
-        yelpData = 'Yelp: No data available';
-      }
-        infoWindowContent = '<div id="infoWindow"> Name: ' + marker.title + '<br/>' + 'Address: ' + marker.address + '<br/>' + 'Phone number: ' + marker.phoneNum + '<br/>' + yelpData + '</div>';
-        infoWindow.setContent(infoWindowContent);
-        infoWindow.open(map, marker);
-      },
-      fail: function() {
-        alert('There was a problem retrieving Yelp data.');
-      }
+      dataType: 'jsonp'
     };
 
     // Send AJAX query via jQuery library.
-    $.ajax(settings);
+    $.ajax(settings)
+    .done(function(results) {
+        var busNum = 0;
+
+
+
+        //Check to make sure there is yelp data available for this business
+        if (results.businesses[busNum]) {
+            //check for the one case where there are two results for the same phone number
+            //Use the second business in the results if true
+           if (results.businesses[0].name === 'Pawn Way') {
+            busNum = 1;
+           }
+
+
+        yelpData = '<a href="'+ results.businesses[busNum].url + '">Yelp</a>: ' + '<img src="' +results.businesses[busNum].rating_img_url_small + '"> ('+ results.businesses[busNum].review_count +') reviews';
+        } else  {
+        yelpData = 'Location does not have a Yelp page.';
+      }
+      })
+      .fail(function() {
+        yelpData = 'Yelp API not available, please try again.';
+        alert('There was a problem retrieving Yelp data. Please wait a little bit and try again.');
+        })
+      .always(function () {
+        infoWindowContent = '<div id="infoWindow"> Name: ' + marker.title + '<br/>' + 'Address: ' + marker.address + '<br/>' + 'Phone number: ' + marker.phoneNum + '<br/>' + yelpData + '</div>';
+        infoWindow.setContent(infoWindowContent);
+        infoWindow.open(map, marker);
+      });
 
   }
 

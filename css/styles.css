@@ -60,6 +60,7 @@ li {
   position: fixed;
   z-index: 1;
   text-align: left;
+  overflow-y: auto;
 }
 
 @media (max-width: 768px) {
